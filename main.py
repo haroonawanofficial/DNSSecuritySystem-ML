@@ -55,7 +55,7 @@ def automate_data_collection(domain, dns_server, neighboring_dns_servers=None):
 # Define a function to perform a zone transfer (if needed)
 def perform_zone_transfer(primary_server, zone_name):
     try:
-        # Implement zone transfer logic here
+        # zone transfer logic here
         zone_transfer_data = []
         zone_transfer_response = dns.query.xfr(primary_server, zone_name)
         for response in zone_transfer_response:
@@ -69,12 +69,12 @@ def perform_zone_transfer(primary_server, zone_name):
 # Define a function to store zone transfer data in MySQL (if needed)
 def store_zone_transfer_in_mysql(domain, zone_data):
     try:
-        # Implement storage logic for zone transfer data in MySQL here
-        # You'll need to establish a database connection and define a table structure.
+        # storage logic for zone transfer data in MySQL here
+        # It need to establish a database connection and define a table structure.
         connection = mysql.connector.connect(
-            host="your_mysql_host",
-            user="your_mysql_user",
-            password="your_mysql_password",
+            host="mysql_host",
+            user="mysql_user",
+            password="mysql_password",
             database="dns_data"
         )
         cursor = connection.cursor()
@@ -133,7 +133,7 @@ def automate_data_collection(domain, dns_server, neighboring_dns_servers=None, a
 
 # Define a function to collect data from the assistant
 def collect_data_from_assistant(domain):
-    # Implement data collection from the assistant here
+    # data collection from the assistant here
     assistant_data = {
         'DNS': {
             'FavoriteColor': 'Blue',
@@ -222,7 +222,7 @@ def automate_data_collection(domain, dns_server, neighboring_dns_servers=None):
 # Define the function to perform a zone transfer (if needed)
 def perform_zone_transfer(primary_server, zone_name):
     try:
-        # Implement zone transfer logic here
+        # zone transfer logic here
         zone_transfer_data = []
         zone_transfer_response = dns.query.xfr(primary_server, zone_name)
         for response in zone_transfer_response:
@@ -285,12 +285,11 @@ def is_custom_anomaly(resolver, domain, responses):
 
 def store_zone_transfer_in_mysql(domain, zone_data):
     try:
-        # Implement storage logic for zone transfer data in MySQL here
-        # You'll need to establish a database connection and define a table structure.
+        # It need to establish a database connection and define a table structure.
         connection = mysql.connector.connect(
-            host="your_mysql_host",
-            user="your_mysql_user",
-            password="your_mysql_password",
+            host="mysql_host",
+            user="mysql_user",
+            password="mysql_password",
             database="dns_data"
         )
         cursor = connection.cursor()
@@ -354,7 +353,7 @@ def automate_data_collection(domain, dns_server, neighboring_dns_servers=None, a
 
 # Define a function to collect data from the assistant
 def collect_data_from_assistant(domain):
-    # Implement data collection from the assistant here
+    # data collection from the assistant here
     assistant_data = {
         'DNS': {
             'FavoriteColor': 'Blue',
@@ -431,11 +430,11 @@ def generate_subdomains(main_domain, neighboring_dns, custom_subdomains=None):
     return list(subdomains)
 
 def store_dns_records_in_mysql(domain, dns_records):
-    # Establish a MySQL database connection (replace with your credentials)
+    # Establish a MySQL database connection (replace with  credentials)
     connection = mysql.connector.connect(
-        host="your_mysql_host",
-        user="your_mysql_user",
-        password="your_mysql_password",
+        host="mysql_host",
+        user="mysql_user",
+        password="mysql_password",
         database="dns_data"
     )
     cursor = connection.cursor()
@@ -460,11 +459,11 @@ def store_dns_records_in_mysql(domain, dns_records):
     connection.close()
 
 def store_subdomains_in_mysql(subdomains):
-    # Establish a MySQL database connection (replace with your credentials)
+    # Establish a MySQL database connection (replace with  credentials)
     connection = mysql.connector.connect(
-        host="your_mysql_host",
-        user="your_mysql_user",
-        password="your_mysql_password",
+        host="mysql_host",
+        user="mysql_user",
+        password="mysql_password",
         database="dns_data"
     )
     cursor = connection.cursor()
@@ -486,11 +485,11 @@ def store_subdomains_in_mysql(subdomains):
     connection.close()
 
 def store_neighboring_dns_in_mysql(neighboring_dns):
-    # Establish a MySQL database connection (replace with your credentials)
+    # Establish a MySQL database connection (replace with  credentials)
     connection = mysql.connector.connect(
-        host="your_mysql_host",
-        user="your_mysql_user",
-        password="your_mysql_password",
+        host="mysql_host",
+        user="mysql_user",
+        password="mysql_password",
         database="dns_data"
     )
     cursor = connection.cursor()
@@ -588,11 +587,11 @@ def generate_subdomains(main_domain, neighboring_dns, custom_subdomains=None):
     return list(subdomains)
 
 def store_dns_records_in_mysql(domain, dns_records):
-    # Establish a MySQL database connection (replace with your credentials)
+    # Establish a MySQL database connection (replace with  credentials)
     connection = mysql.connector.connect(
-        host="your_mysql_host",
-        user="your_mysql_user",
-        password="your_mysql_password",
+        host="mysql_host",
+        user="mysql_user",
+        password="mysql_password",
         database="dns_data"
     )
     cursor = connection.cursor()
@@ -617,11 +616,11 @@ def store_dns_records_in_mysql(domain, dns_records):
     connection.close()
 
 def store_subdomains_in_mysql(subdomains):
-    # Establish a MySQL database connection (replace with your credentials)
+    # Establish a MySQL database connection (replace with  credentials)
     connection = mysql.connector.connect(
-        host="your_mysql_host",
-        user="your_mysql_user",
-        password="your_mysql_password",
+        host="mysql_host",
+        user="mysql_user",
+        password="mysql_password",
         database="dns_data"
     )
     cursor = connection.cursor()
@@ -643,11 +642,11 @@ def store_subdomains_in_mysql(subdomains):
     connection.close()
 
 def store_neighboring_dns_in_mysql(neighboring_dns):
-    # Establish a MySQL database connection (replace with your credentials)
+    # Establish a MySQL database connection (replace with  credentials)
     connection = mysql.connector.connect(
-        host="your_mysql_host",
-        user="your_mysql_user",
-        password="your_mysql_password",
+        host="mysql_host",
+        user="mysql_user",
+        password="mysql_password",
         database="dns_data"
     )
     cursor = connection.cursor()
@@ -691,9 +690,9 @@ def find_non_contiguous_ips(ip_list):
 
 def add_ips_to_db(ip_list, domain, table_name):
     connection = mysql.connector.connect(
-        host="your_mysql_host",
-        user="your_mysql_user",
-        password="your_mysql_password",
+        host="mysql_host",
+        user="mysql_user",
+        password="mysql_password",
         database="dns_data"
     )
 
@@ -710,14 +709,35 @@ def add_ips_to_db(ip_list, domain, table_name):
     connection.commit()
     connection.close()
 
- def main():
+def discover_neighboring_dns_servers(dns_servers):
+    neighboring_dns_servers = set()
+    resolver = dns.resolver.Resolver()
+
+    for dns_server in dns_servers:
+        try:
+            response = resolver.query("example.com", rdtype="A", rdclass="IN", source=dns_server)
+            for answer in response:
+                neighboring_dns_servers.add(answer.address)
+        except Exception as e:
+            print(f"Error querying {dns_server}: {e}")
+
+    return list(neighboring_dns_servers)
+
+def main():
     target_domain = input("Enter the domain name (or press Enter to use the default domain 'example.com'): ")
-    target_domain = target_domain.strip() if target_domain else default_domain
+    target_domain = target_domain.strip() if target_domain else "example.com"  # Default domain
 
     custom_dns_servers = input("Enter custom DNS servers separated by a space (or press Enter to use default DNS servers): ")
-    custom_dns_servers = custom_dns_servers.split() if custom_dns_servers else default_dns_servers
+    custom_dns_servers = custom_dns_servers.split() if custom_dns_servers else ["8.8.8.8", "8.8.4.4"]  # Default DNS servers
 
-    neighboring_dns_servers = ["8.8.8.8", "8.8.4.4"]  # Replace with actual neighboring DNS server IPs
+    neighboring_dns_servers = discover_neighboring_dns_servers(custom_dns_servers)
+
+    if neighboring_dns_servers:
+        print("Neighboring DNS Servers:")
+        for server in neighboring_dns_servers:
+            print(server)
+    else:
+        print("No neighboring DNS servers found.")
 
     ip_list = []
 
@@ -742,7 +762,7 @@ def add_ips_to_db(ip_list, domain, table_name):
     # Collect DNS records for the main domain
     main_domain_records = collect_dns_records(target_domain, custom_dns_servers)
 
- # Collect DNS records for the main domain
+    # Collect DNS records for the main domain
     main_domain_records = collect_dns_records(target_domain, custom_dns_servers)
 
     # Collect DNS records for neighboring DNS servers
@@ -757,11 +777,11 @@ def add_ips_to_db(ip_list, domain, table_name):
         store_zone_transfer_in_mysql(target_domain, zone_transfer_data)
 
     # Train a machine learning model and detect anomalies
-    data_storage = main_domain_records  # You can extend this to include neighboring DNS records
+    data_storage = main_domain_records  #  extend this to include neighboring DNS records
     model = train_machine_learning_model(data_storage)
     anomalies = detect_anomalies(model, data_storage)
 
-    # Implement custom anomaly checks
+    # custom anomaly checks
     for resolver in resolvers:
         if is_custom_anomaly(resolver, target_domain, resolver.responses):
             logging.warning(f"Custom anomaly detected for resolver {resolver.ip}")
@@ -800,7 +820,7 @@ def add_ips_to_db(ip_list, domain, table_name):
         baseline = set()
         deviations = analyze_historical_traffic(data_storage, baseline)
 
-        # Implement attack checks for DNS hijacking, spoofing, cache poisoning, resolver attacks
+        # attack checks for DNS hijacking, spoofing, cache poisoning, resolver attacks
         for resolver in resolvers:
             if is_dns_hijacking(resolver, domain_to_monitor, resolver.responses):
                 logging.warning(f"DNS hijacking detected for resolver {resolver.ip}")
@@ -818,7 +838,7 @@ def add_ips_to_db(ip_list, domain, table_name):
                 logging.warning(f"DNS resolver cache poisoning detected for resolver {resolver.ip}")
                 print(f"DNS resolver cache poisoning detected for resolver {resolver.ip}")
 
-        # Implement attack checks for DNS sequence number guessing (DNS ID guessing)
+        # attack checks for DNS sequence number guessing (DNS ID guessing)
         for resolver in resolvers:
             if is_dns_sequence_number_guessing(resolver, domain_to_monitor, resolver.responses):
                 logging.warning(f"DNS sequence number guessing detected for resolver {resolver.ip}")
@@ -831,8 +851,22 @@ def collect_dns_records(domain, custom_dns_servers=None):
     pass
 
 def collect_neighboring_dns_records(neighboring_dns_servers):
-    # Collect DNS records for neighboring DNS servers
-    pass
+    neighboring_records = {}
+    record_types = ["A", "MX", "CNAME", "TXT", "NS", "PTR"]
+
+    for server in neighboring_dns_servers:
+        neighboring_records[server] = {}
+        resolver = dns.resolver.Resolver()
+
+        for record_type in record_types:
+            try:
+                answers = resolver.query(server, rdtype=record_type)
+                neighboring_records[server][record_type] = [str(answer) for answer in answers]
+            except Exception as e:
+                neighboring_records[server][record_type] = []
+                print(f"Error querying neighboring DNS server {server} for {record_type} records: {e}")
+
+    return neighboring_records
 
 # Define functions for machine learning and anomaly detection
 def train_machine_learning_model(data):
@@ -902,7 +936,7 @@ def main():
         neighboring_dns_records[server] = collect_neighboring_dns_records(server)
 
     # Train a machine learning model and detect anomalies
-    data_storage = main_domain_records  # You can extend this to include neighboring DNS records
+    data_storage = main_domain_records  #  extend this to include neighboring DNS records
     model = train_machine_learning_model(data_storage)
     anomalies = detect_anomalies(model, data_storage)
 
@@ -910,13 +944,14 @@ def main():
     display_dns_information(main_domain_records, neighboring_dns_records, anomalies)
 
 
-        # Implement custom anomaly checks
-        for resolver in resolvers:
-            if is_custom_anomaly(resolver, domain_to_monitor, resolver.responses):
-                logging.warning(f"Custom anomaly detected for resolver {resolver.ip}")
-                print(f"Custom anomaly detected for resolver {resolver.ip}")
+    # custom anomaly checks
+    for resolver in resolvers:
+        if is_custom_anomaly(resolver, domain_to_monitor, resolver.responses):
+            logging.warning(f"Custom anomaly detected for resolver {resolver.ip}")
+            print(f"Custom anomaly detected for resolver {resolver.ip}")
 
-        # Display the information in tabular format
+    # Display the information in tabular format
+
 def display_dns_information(domain, anomalies):
     # Prepare the data for tabulation
     table_data = []
