@@ -15,6 +15,7 @@ Machine Learning DNS Security System is a robust, defensive solution for DNS mon
 - **Neighboring DNS Servers:** Analyzes neighboring DNS servers.
 - **Non-Contiguous IP Scanning:** Scans for non-contiguous IP space.
 - **Anomaly Detection:** Utilizes machine learning for identifying DNS anomalies for scan, attacks and discoveries, keeping the track to protect DNS infrastructure.
+- **Centralized Storage and Data Records Processing:** Designed for use in large data centers, small and medium-sized businesses with segmented or constrained networks, or public-facing IP addresses.
 
 ## Trained Machine Learning Model
 - Anomaly Detection: The trained model can effectively identify anomalies in DNS data, such as unusual patterns or suspicious activity, which may indicate security threats.
