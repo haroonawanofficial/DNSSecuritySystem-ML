@@ -23,87 +23,17 @@ ML DNS Security System is intended for organizations and professionals who want 
 
 ## Comparison between top softwares/tools with ML DNS SECURITY SYSTEM
 
-+-----------------------------+---------------------+--------------------------+
-| Feature / Option            | ML DNS Security Sytem| Fierce DNS Enumeration   |
-|                             |                      | Tool                     |
-|                             | Defensive or         | Defensive or Offensive   |
-|                             | Offensive Purpose    | Purpose                  |
-+-----------------------------+----------------------+--------------------------+
-| Purpose                     | DNS monitoring,      | DNS enumeration and      |
-|                             | anomaly detection    | subdomain discovery      |
-|                             | Defensive            | Offensive                |
-|                             |                      | Offensive                |
-+-----------------------------+----------------------+--------------------------+
-| Use Case                    | Ongoing DNS          | DNS reconnaissance,      |
-|                             | monitoring, automated| manual discovery         |
-|                             | analysis             | Defensive                |
-|                             | Defensive            | Offensive                |
-+-----------------------------+----------------------+--------------------------+
-| Automation                  | Automated, designed  | Can be scripted but      |
-|                             | for continuous       | often manual             |
-|                             | operation            | Defensive                |
-|                             | Defensive            | Offensive                |
-+-----------------------------+----------------------+--------------------------+
-| Capabilities                | - DNS data collection| - Subdomain discovery    |
-|                             | - Anomaly detection  | - DNS zone transfer      |
-|                             | - Machine learning   | - Limited to DNS         |
-|                             | - Data storage       | enumeration              |
-|                             | - Neighboring DNS    | Defensive                |
-|                             |   discovery          | Offensive                |
-|                             | - Non-contiguous IP  | Defensive                |
-|                             |   scanning           |                          |
-|                             | Defensive            | Defensive                |
-|                             |                      | Offensive                |
-+-----------------------------+----------------------+--------------------------+
-| Deployment                  | Deployment into      | Command-line utility,    |
-|                             | monitoring/analysis  | manual operation         |
-|                             | system               | Defensive                |
-|                             | Defensive            | Offensive                |
-+-----------------------------+----------------------+--------------------------+
-| Data Storage                | Stores DNS records   | No built-in data storage |
-|                             | and anomalies in an  | capabilities             |
-|                             | SQLite database      | Defensive                |
-|                             | Defensive            | Defensive                |
-|                             |                      | Offensive                |
-+-----------------------------+----------------------+--------------------------+
-| Anomaly Detection           | Yes, for detecting   | No, not designed for     |
-|                             | DNS anomalies        | anomaly detection        |
-|                             | Defensive            | Offensive                |
-+-----------------------------+----------------------+--------------------------+
-| Machine Learning            | Machine learning     | N/A                      |
-|                             | model for anomaly    | Defensive                |
-|                             | detection            | Offensive                |
-+-----------------------------+----------------------+--------------------------+
-| Subdomain Discovery         | Limited, primarily   | Yes, Fierce uses brute   |
-|                             | focuses on DNS       | force for subdomain      |
-|                             | monitoring and       | discovery                |
-|                             | subdomain discovery  | Defensive                |
-|                             | Defensive            | Offensive                |
-+-----------------------------+----------------------+--------------------------+
-| DNS Zone Transfer           | Supports DNS zone    | Attempts DNS zone        |
-|                             | transfer             | transfer if the target   |
-|                             | Defensive            | is vulnerable            |
-|                             |                      | Defensive                |
-|                             |                      | Offensive                |
-+-----------------------------+----------------------+--------------------------+
-| SOA Record Retrieval        | Retrieves SOA        | Not explicitly designed  |
-|                             | records for the      | for SOA retrieval        |
-|                             | target domain        | Defensive                |
-|                             | Defensive            | Defensive                |
-|                             |                      | Offensive                |
-+-----------------------------+----------------------+--------------------------+
-| Custom Anomaly Checks       | Yes, supports        | No custom anomaly checks |
-|                             | custom anomaly       | Defensive                |
-|                             | checks               | Defensive                |
-|                             | Defensive            | Offensive                |
-+-----------------------------+----------------------+--------------------------+
-| Neighboring DNS Servers     | Analyzes neighboring | Not applicable           |
-|                             | DNS servers          | Defensive                |
-|                             | Defensive            | Defensive                |
-|                             |                      | Offensive                |
-+-----------------------------+----------------------+--------------------------+
-| Non-Contiguous IP Scanning  | Supports scanning    | Not applicable           |
-|                             | for non-contiguous   | Defensive                |
-|                             | IP space             | Defensive                |
-|                             | Defensive            | Offensive                |
-+-----------------------------+---------------------+--------------------------+
+Purpose: ML DNS Security System (Defensive) vs. Fierce DNS Enumeration Tool (Offensive)
+Use Case: Ongoing DNS monitoring, automated analysis (Defensive) vs. DNS reconnaissance, manual discovery (Offensive)
+Automation: Automated, continuous operation (Defensive) vs. Scriptable, often manual (Offensive)
+Capabilities: Broad capabilities, including data collection, anomaly detection, machine learning, data storage, neighboring DNS discovery, and non-contiguous IP scanning (Defensive) vs. Limited to DNS enumeration (Offensive)
+Deployment: Integration into monitoring/analysis systems (Defensive) vs. Command-line utility, manual operation (Offensive)
+Data Storage: Stores DNS records and anomalies in an SQLite database (Defensive) vs. No built-in data storage capabilities (Defensive/Offensive)
+Anomaly Detection: Detects DNS anomalies (Defensive) vs. Not designed for anomaly detection (Offensive)
+Machine Learning: Utilizes machine learning (Defensive) vs. N/A (Defensive/Offensive)
+Subdomain Discovery: Supports limited subdomain discovery (Defensive) vs. Fierce uses brute force for subdomain discovery (Offensive)
+DNS Zone Transfer: Supports DNS zone transfer (Defensive) vs. Attempts DNS zone transfer if the target is vulnerable (Defensive/Offensive)
+SOA Record Retrieval: Retrieves SOA records for the target domain (Defensive) vs. Not explicitly designed for SOA retrieval (Defensive/Offensive)
+Custom Anomaly Checks: Supports custom anomaly checks (Defensive) vs. No custom anomaly checks (Defensive/Offensive)
+Neighboring DNS Servers: Analyzes neighboring DNS servers (Defensive) vs. Not applicable (Defensive/Offensive)
+Non-Contiguous IP Scanning: Supports scanning for non-contiguous IP space (Defensive) vs. Not applicable (Defensive/Offensive)
